@@ -26,6 +26,7 @@
     "tape": "^5.5.3"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.8.0",
     "@nichoth/multihash": "^0.0.5",
     "cloudinary": "^1.30.0"
   }
