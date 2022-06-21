@@ -11,8 +11,7 @@ module.exports = function createCloudinary (config) {
 
             return new Promise(function (resolve, reject) {
                 cloudinary.uploader.upload(file, {
-                    public_id: slugifiedHash,
-                    overwrite: true
+                    public_id: slugifiedHash
                 }, function (err, res) {
                     if (err) return reject(err)
                     resolve({ hash: slugifiedHash, response: res })
