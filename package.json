@@ -1,1 +1,28 @@
-{}
+{
+  "name": "@nichoth/blob-store",
+  "version": "0.0.0",
+  "description": "Store blobs",
+  "main": "index.js",
+  "scripts": {
+    "postversion": "git push && git push --tags && npm publish",
+    "test": "tape test/*.js | tap-arc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/blob-store.git"
+  },
+  "keywords": [
+    "blob"
+  ],
+  "author": "nichoth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/blob-store/issues"
+  },
+  "homepage": "https://github.com/nichoth/blob-store#readme",
+  "devDependencies": {
+    "tap-arc": "^0.3.4",
+    "tape": "^5.5.3"
+  }
+}
+
