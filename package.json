@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/nichoth/blob-store#readme",
   "devDependencies": {
+    "dotenv": "^16.0.1",
     "tap-arc": "^0.3.4",
     "tape": "^5.5.3"
+  },
+  "dependencies": {
+    "@nichoth/multihash": "^0.0.5",
+    "cloudinary": "^1.30.0"
   }
 }
-
