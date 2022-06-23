@@ -16,6 +16,7 @@ npm i -S @nichoth/blob-store
 require('dotenv').config()
 const BlobStore = require('@nichoth/blob-store/cloudinary')
 const cloudinaryUrl = require('@nichoth/blob-store/cloudinary/url')
+import { scale } from "@cloudinary/url-gen/actions/resize";
 const test = require('tape')
 
 test('create a blob store', t => {
@@ -61,6 +62,7 @@ test('get a URL', t => {
 
     const url = (cld
         .image(_hash)
+        .resize( scale().width(100) )
         .toURL())
 
     console.log(url)
