@@ -6,15 +6,15 @@ module.exports = function createCloudinary (config) {
 
     return {
         write: function (file, hash) {
-            hash = hash || getHash(file)
-            var slugifiedHash = encodeURIComponent('' + hash)
+            hash = hash || ('&' + getHash(file))
+            var slugifiedHash = encodeURIComponent(hash)
 
             return new Promise(function (resolve, reject) {
                 cloudinary.uploader.upload(file, {
                     public_id: slugifiedHash
                 }, function (err, res) {
                     if (err) return reject(err)
-                    resolve({ hash: slugifiedHash, response: res })
+                    resolve({ hash: hash, response: res })
                 })
             })
         }
