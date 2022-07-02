@@ -1,6 +1,6 @@
 {
   "name": "@nichoth/blob-store",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Store blobs",
   "main": "index.js",
   "scripts": {
