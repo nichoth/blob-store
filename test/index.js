@@ -25,6 +25,7 @@ test('call blobstore.write', t => {
     blobStore.write(file)
         .then(({ hash, response }) => {
             _hash = hash
+            console.log('hash', hash)
             t.equal(hash[0], '&',
                 'should create a hash string with the expected sigil chracter')
             t.ok(hash.includes('.sha256'),
