@@ -5,16 +5,19 @@ module.exports = function createCloudinary (config) {
     cloudinary.config(config)
 
     return {
-        write: function (file, hash) {
-            hash = hash || ('&' + getHash(file))
-            var slugifiedHash = encodeURIComponent(hash)
+        write: async function (file) {
+            // hash = hash || ('&' + await getHash(file))
+            // var slugifiedHash = encodeURIComponent(hash)
 
-            return new Promise(function (resolve, reject) {
-                cloudinary.uploader.upload(file, {
-                    public_id: slugifiedHash
-                }, function (err, res) {
-                    if (err) return reject(err)
-                    resolve({ hash: hash, response: res })
+            return getHash(file).then(hash => {
+                var slugifiedHash = encodeURIComponent('&' + hash)
+                return new Promise(function (resolve, reject) {
+                    cloudinary.uploader.upload(file, {
+                        public_id: slugifiedHash
+                    }, function (err, res) {
+                        if (err) return reject(err)
+                        resolve({ hash: '&' + hash, response: res })
+                    })
                 })
             })
         }
