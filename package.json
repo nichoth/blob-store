@@ -3,7 +3,6 @@
   "version": "0.3.1",
   "description": "Store blobs",
   "main": "index.js",
-  "browser": "browser.js",
   "scripts": {
     "postversion": "git push && git push --tags && npm publish",
     "test": "tape test/*.js | tap-arc"
@@ -22,13 +21,14 @@
   },
   "homepage": "https://github.com/nichoth/blob-store#readme",
   "devDependencies": {
+    "browserify": "^17.0.0",
     "dotenv": "^16.0.1",
     "tap-arc": "^0.3.4",
     "tape": "^5.5.3"
   },
   "dependencies": {
     "@cloudinary/url-gen": "^1.8.0",
-    "@nichoth/multihash": "^0.3.2",
+    "@nichoth/multihash": "^0.4.0",
     "cloudinary": "^1.30.0"
   }
 }
