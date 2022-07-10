@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "Store blobs",
   "main": "index.js",
+  "browser": "browser.js",
   "scripts": {
     "postversion": "git push && git push --tags && npm publish",
     "test": "tape test/*.js | tap-arc"
