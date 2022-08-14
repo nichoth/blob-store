@@ -5,7 +5,7 @@ module.exports = function createCloudinary (config) {
     cloudinary.config(config)
 
     return {
-        write: async function (file) {
+        write: function (file) {
             // hash = hash || ('&' + await getHash(file))
             // var slugifiedHash = encodeURIComponent(hash)
 

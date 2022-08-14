@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@cloudinary/url-gen": "^1.8.0",
-    "@nichoth/multihash": "^0.4.0",
+    "@nichoth/multihash": "^0.6.0",
     "cloudinary": "^1.30.0"
   }
 }
